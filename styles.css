@@ -1,0 +1,344 @@
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: center;
+    gap: 88px; 
+    /* padding: 14px;  Remove or reduce if you want less vertical space */
+}
+
+#navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 0 12px;
+    transition: transform 0.3s ease; /* Add this line */
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    text-decoration-color: forestgreen;
+    transform: scale(1.05); /* Add this line */
+}
+
+#home {
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    position: relative;
+    background-image: url(images/spinach.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.6); 
+    z-index: 2;
+    pointer-events: none;
+}
+
+main > * {
+    position: relative;
+    z-index: 3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: relative;
+    z-index: 3;
+}
+
+#rig {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+#content
+
+#sow-know,
+#greenthumb {
+    flex: 1 1 0;
+    text-align: center;
+    display: block;
+    max-width: 500px;
+}
+
+ul {
+    text-align: left;
+}
+
+#services {
+    text-align: center;
+}
+
+#greenthumb a,
+#sow-know a {
+    text-decoration: none;
+    color: black;
+}
+
+#greenthumb img,
+#sow-know img {
+    transition: transform 0.3s ease;
+}
+
+#greenthumb img:hover,
+#sow-know img:hover {
+    transform: scale(1.05);
+}
+
+#intro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Adjust gap as needed */
+}
+
+
+.no-overlay::before {
+    display: none !important;
+}
+
+
+#log,
+#sign {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Adjust as needed for vertical centering */
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.form-box {
+    background: rgba(255,255,255,0.6); /* 60% opaque */
+    padding: 40px 32px; /* Equal top/bottom and left/right padding */
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    min-width: 260px;
+    max-width: 340px;
+    width: 100%;
+    margin: 40px auto; /* Space above/below and center horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#feedback .form-box {
+    min-height: 500px;
+    padding: 50px 40px;
+    max-width: 400px;
+}
+
+/* Prevent .form-box from touching the viewport edges on small screens */
+@media (max-width: 400px) {
+    .form-box {
+        margin: 24px;
+        padding: 24px 8px;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+#statement {
+    text-align: center;
+    margin: 20px 40px;
+}
+
+#intro,
+#statement,
+#services,
+#rig {
+    margin-bottom: 72px; /* Adjust value as needed */
+}
+
+#about-us {
+    text-align: center;
+    margin: 20px 40px;
+}
+
+#button {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#chatbot,
+#calculator,
+#feedback,
+#log,
+#sign {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Adjust as needed for vertical centering */
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 50px 0;
+    padding-top: 10px;
+}
+
+.message { margin: 10px 0; }
+.user { color: #2c3e50; font-weight: bold; }
+.bot { color: black; font-weight:bolder; }
+input[type=text] { width: 80%; padding: 10px; }
+button { padding: 10px; padding-top: 10px; }
+
+
+
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-box input[type=submit],
+.form-box button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-box input[type=submit]:hover,
+.form-box button:hover {
+    background-color: darkgreen;
+}
+
+.form-message {
+    font-size: 14px;
+    margin: 8px 0;
+    height: 18px; /* reserve space so layout doesn’t jump */
+}
+
+.form-message.error {
+    color: red;
+    font-weight: bold;
+}
+
+.form-message.success {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+/* Container */
+#content {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#content h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: forestgreen;
+    font-weight: bold;
+}
+
+/* Team grid */
+#team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 32px;
+    justify-items: center;
+}
+
+/* Each member card */
+#team section {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 260px;
+}
+
+#team section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Images */
+#team img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    border: 3px solid forestgreen;
+}
+
+/* Names */
+#team h3 {
+    margin: 8px 0 4px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+/* Student numbers */
+#team p {
+    font-size: 14px;
+    color: #555;
+}

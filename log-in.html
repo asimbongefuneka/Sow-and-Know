@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SOW & KNOW</title>
+        <link rel="stylesheet" href="styles.css?=v1">
+        <link rel="icon" type="image/avif" href="images/HandsHoldingPlant.avif">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main class="no-overlay">
+            <div id="log">
+                <div class="form-box">
+                    <h2>Log In</h2>
+                    <p class="form-message"></p>
+                    <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required><br><br>
+                        <input type="submit" value="Log In">
+                    </form>
+                    <p>Don't have an account? <a href="sign-up.html"><button>Sign Up</button></a></p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 SOW & KNOW</p>
+        </footer>
+    </body>
+</html>

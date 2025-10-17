@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SOW & KNOW</title>
+        <link rel="stylesheet" href="styles.css?=v1">
+        <link rel="icon" type="image/avif" href="images/HandsHoldingPlant.avif">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main class="no-overlay">
+            <div id="calculator">
+                <div class="form-box">
+                    <h2>Green Thumb</h2>
+                    <p class="form-message"></p>
+                    <label for="plantType">Plant Type:</label>
+                    <select id="plantType">
+                        <option value="tomato">Tomato</option>
+                        <option value="lettuce">Lettuce</option>
+                        <option value="carrot">Carrot</option>
+                        <option value="cabbage">Cabbage</option>
+                        <option value="pepper">Pepper</option>
+                        <option value="spinach">Spinach</option>
+                        <option value="beetroot">Beetroot</option>
+                        <option value="onion">Onion</option>
+                        <option value="garlic">Garlic</option>
+                        <option value="pumpkin">Pumpkin</option>
+                        <option value="maize">Maize</option>
+                    </select>
+
+                    <label for="growthStage">Growth Stage:</label>
+                    <select id="growthStage">
+                        <option value="seedling">Seedling</option>
+                        <option value="vegetative">Vegetative</option>
+                        <option value="flowering">Flowering</option>
+                        <option value="fruiting">Fruiting</option>
+                    </select>
+
+                    <label for="temperature">Temperature (°C):</label>
+                    <input type="number" id="temperature" value="20">
+
+                    <button onclick="calculateWater()">Calculate</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 SOW & KNOW</p>
+        </footer>
+
+    <script>
+        function calculateWater() {
+            const plant = document.getElementById('plantType').value;
+            const stage = document.getElementById('growthStage').value;
+            const temp = parseFloat(document.getElementById('temperature').value);
+
+            const baseWater = {
+                tomato: 10,
+                lettuce: 6,
+                carrot: 8,
+                cabbage: 9,
+                pepper: 7,
+                spinach: 5,
+                beetroot: 7,
+                onion: 6,
+                garlic: 5,
+                pumpkin: 12,
+                maize: 10
+            };
+
+            const stageMultiplier = {
+                seedling: 0.5,
+                vegetative: 1.0,
+                flowering: 1.2,
+                fruiting: 1.5
+            };
+
+            let tempFactor = 1.0;
+            if (temp < 15) tempFactor = 0.8;
+            else if (temp > 25) tempFactor = 1.2;
+
+            const base = baseWater[plant];
+            const multiplier = stageMultiplier[stage];
+            const total = base * multiplier * tempFactor;
+
+            document.getElementById('result').innerText = `Estimated water needed for ${plant} at ${stage} stage in ${temp}°C is ${total.toFixed(1)} liters per week.`;
+        }
+    </script>
+</body>
+</html>
