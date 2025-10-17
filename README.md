@@ -1,6 +1,9 @@
 # Sow-and-Know
 Community Food Gardening Assistant
 
+## Live Demo
+[Sow & Know Website](https://asimbongefuneka.github.io/Sow-and-Know/)
+
 Our website is dedicated to equipping individuals with the essential knowledge for successful planting and gardening, with a special focus on soil fertility and water management.
 We aim to guide users in understanding different soil types, how to enrich them for better plant growth, and how to use water efficiently in various gardening conditions.
 Additionally, we help users choose the right types of plants that thrive in specific soil environments, ensuring healthier gardens and more sustainable practices.
